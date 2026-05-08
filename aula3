@@ -1,0 +1,32 @@
+import streamlit as st
+
+st.title('calcular imc')
+
+n1 = st.number_input('peso:')
+n2 = st.number_input('altura:', value = 0.1)
+
+imc = n1/(n2**2)
+
+if st.button('calcular imc'):
+    if imc:
+        st.success(imc)
+#----------------------------------------------------------------
+
+st.caption('CADASTRO SIMPLES')
+
+nome = st.text_input('Nome: ')
+idade = st.number_input('Idade: ')
+email = st.text_input('email: ')
+altura = st.number_input('Altura: ')
+
+if st.button('Cadastrar'):
+    st.success('Pessoa cadsatrada')
+#--------------------------------------------------------------
+numero =  st.number_input('numero: ')
+
+if st.button('Calcular:'):
+    for x in range(0,11):
+        calculo = x * numero
+        # st.write(x , 'x', numero, '=', calculo)
+        st.write(f'{x} X {numero} = {calculo}')
+#--------------------------------------------------------------
