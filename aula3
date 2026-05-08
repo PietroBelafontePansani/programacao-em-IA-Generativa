@@ -1,3 +1,50 @@
+# pro codding -> codifica
+
+import streamlit as st
+import pandas as pd
+
+
+st.title('teste')
+dados = pd.read_csv('vendas.csv')
+
+df = pd.DataFrame(dados)
+st.bar_chart(df, x = 'nome', y = 'venda')
+
+#-----------------------------------------------------
+
+st.caption('Paragrafo')
+st.audio('audio.mp3')
+st.image('img.jpg', width=250)
+
+#-----------------------------------------------------
+
+# calculadora
+
+st.title('calculadora')
+
+st.caption('colocar 1 depois outro numero escolha a operação e ver o resultado')
+
+n1 = st.number_input('primero numero')
+n2 = st.number_input('segundo numero')
+
+escolha = st.selectbox('escolha a operação: ',['+','-','*','/'])
+
+if st.button('calcular'):
+    if escolha == '+':
+        soma = n1 + n2
+        resultado = soma
+    elif escolha == '-':
+        sub = n1 - n2
+        resultado = sub
+    elif escolha == '*':
+        mult = n1 * n2
+        resultado = mult
+    elif escolha == '/':
+        div = n1 / n2
+        resultado = div
+
+    st.success(resultado)
+#--------------------------------------------------------------
 import streamlit as st
 
 st.title('calcular imc')
