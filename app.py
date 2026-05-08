@@ -1,47 +1,25 @@
 import streamlit as st
 
-# 2
+st.title('portfolio')
 
-st.title('teste')
+# Nome
+st.header('nome')
+st.write('pietro belafonte pansani')
 
-n1 = st.number_input('peso:')
-n2 = st.number_input('altura:', value = 0.1)
+#Sobre 
+st.header('sobre mim')
+st.write(""" gosto de ler.
+         """)
 
-imc  =  n1/(n2**2)
+# curiosidade
+st.header('Curiosidades')
+st.write(
+   'gosto esportes, '
+   'gosto academia, '
+   'joga video game. '
+)
 
-if st.button('calcular IMC'):
-    if imc:
-        st.success(imc)
-# -----------------------------------------
-
-# 3 
-
-# formulário 
-
-st.caption('CADASTRO SIMPLES')
-
-nome = st.text_input('Nome: ')
-idade = st.number_input('Idade: ')
-email = st.text_input('E-mail: ')
-altura = st.number_input('Altura: ')
-
-if st.button('Cadastrar'):
-    st.success('Pessoa cadastrada')
-
-
-# 4
-
-# Tabuada 
-
-numero =  st.number_input('numero: ')
-
-
-if st.button('Calcular:'):
-    for x in range(0,11):
-        calculo = x * numero
-        # st.write(x , 'x', numero, '=', calculo)
-        st.write(f'{x} X {numero} = {calculo}')
-    
-
-   
-    
+#foto
+st.header('foto')
+st.image('img.jpg')
+width = 200
